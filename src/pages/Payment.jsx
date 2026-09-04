@@ -1,0 +1,5 @@
+import React,{useState} from 'react';
+import {useNavigate} from 'react-router-dom';
+import {CheckCircle2,Lock} from 'lucide-react';
+import {PageShell} from '../components/Common';
+export default function Payment(){const nav=useNavigate();const [method,setMethod]=useState('UPI');return <PageShell kicker="Step 2 of 2" title="Secure payment"><div className="mt-8 mx-auto max-w-4xl rounded-2xl border bg-white p-6 sm:p-8"><div className="grid gap-3">{['UPI','Credit / Debit Card','Net Banking'].map(m=><button onClick={()=>setMethod(m)} className={`flex items-center justify-between rounded-xl border p-4 text-left ${method===m?'border-teal ring-2 ring-teal/10':''}`} key={m}><span className="font-bold">{m}</span>{method===m&&<CheckCircle2 className="text-teal" size={19}/>}</button>)}</div><div className="mt-7 rounded-xl bg-mist p-5"><p className="text-xs text-slate-500">Total payable</p><p className="mt-1 text-3xl font-black">₹1,400</p></div><button onClick={()=>nav('/confirmation')} className="btn-primary mt-6 w-full"><Lock size={17}/>Pay ₹1,400 Securely</button></div></PageShell>}

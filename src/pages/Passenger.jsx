@@ -1,0 +1,5 @@
+import React from 'react';
+import {useNavigate} from 'react-router-dom';
+import {ArrowRight} from 'lucide-react';
+import {PageShell,Summary} from '../components/Common';
+export default function Passenger(){const nav=useNavigate();return <PageShell kicker="Step 1 of 2" title="Passenger information"><div className="mt-8 grid gap-7 lg:grid-cols-[1.5fr_.8fr]"><section className="rounded-2xl border bg-white p-6"><div className="grid gap-4 sm:grid-cols-2"><input className="field" placeholder="Full name"/><input className="field" placeholder="Mobile number"/><input className="field" placeholder="Email address"/><select className="field"><option>ID type</option><option>Aadhaar</option><option>Passport</option><option>Driving licence</option></select><input className="field sm:col-span-2" placeholder="ID number"/></div><label className="mt-5 flex gap-2 text-sm text-slate-600"><input type="checkbox" defaultChecked/>Save details for future bookings</label><button onClick={()=>nav('/payment')} className="btn-primary mt-7">Continue to payment <ArrowRight size={17}/></button></section><Summary/></div></PageShell>}
