@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 760" role="img" aria-labelledby="title desc">
+  <title id="title">Ferry crossing a calm blue sea</title>
+  <desc id="desc">A stylized ferry traveling toward a sunny coastal horizon.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#dff5fa"/><stop offset="1" stop-color="#fff"/></linearGradient>
+    <linearGradient id="sea" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#78cbd3"/><stop offset="1" stop-color="#0b6576"/></linearGradient>
+  </defs>
+  <rect width="1600" height="760" fill="url(#sky)"/>
+  <circle cx="1240" cy="180" r="90" fill="#ffe6a3" opacity=".9"/>
+  <path d="M0 390c220-90 390-70 600 5s410 75 610-5 270-90 390-30v400H0Z" fill="url(#sea)"/>
+  <path d="M0 470c240-50 380-45 600 8s390 50 610-8 270-45 390-15" fill="none" stroke="#b9edf0" stroke-width="9" opacity=".75"/>
+  <path d="M0 570c230-45 390-40 590 8s400 55 620-7 260-45 390-15" fill="none" stroke="#d5f6f6" stroke-width="6" opacity=".7"/>
+  <g transform="translate(650 300)">
+    <path d="M0 145h390l-44 72H45Z" fill="#063b4c"/>
+    <path d="M42 145h310l-22 36H63Z" fill="#f8ffff"/>
+    <rect x="70" y="74" width="220" height="71" rx="8" fill="#fff"/>
+    <path d="M92 74V32h173v42" fill="#0b7a75"/>
+    <path d="M112 47h36v24h-36zm55 0h36v24h-36zm55 0h25v24h-25z" fill="#dff5fa"/>
+    <path d="M52 185h276" stroke="#14a0a0" stroke-width="9"/>
+  </g>
+  <path d="M190 315c30-25 60-25 90 0m36-8c22-18 44-18 66 0" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="5" opacity=".8"/>
+</svg>

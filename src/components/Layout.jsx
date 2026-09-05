@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {useLocation,useNavigate} from 'react-router-dom';
 import {Ship,ArrowRight,Menu,X} from 'lucide-react';
 
-export function Layout({children}){return <><Header/>{children}<Footer/></>}
+export function Layout({children}){return <div className="flex min-h-screen flex-col"><Header/><div className="flex-1">{children}</div><Footer/></div>}
 export function Header(){
   const [open,setOpen]=useState(false); const nav=useNavigate(); const loc=useLocation();
   const go=(p)=>{setOpen(false);nav(p)};
