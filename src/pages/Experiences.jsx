@@ -27,5 +27,24 @@ export default function Experiences(){
   const [filter,setFilter]=useState('All');
   const categories=['All',...new Set(experiences.map(experience=>experience.type))];
   const visible=useMemo(()=>filter==='All'?experiences:experiences.filter(experience=>experience.type===filter),[filter]);
-  return <PageShell kicker="Travel better" title="Experiences on the water"><p className="mt-3 max-w-2xl text-slate-500">More than a ferry ride. Find memorable ways to explore India’s islands, harbours and coastal cities.</p><div className="mt-8 grid gap-4 rounded-2xl bg-ocean p-6 text-white sm:grid-cols-3"><div className="flex items-center gap-3"><span className="grid h-11 w-11 place-items-center rounded-full bg-white/10"><Ship size={21}/></span><span><b className="block">Curated journeys</b><small className="text-white/60">Handpicked routes</small></span></div><div className="flex items-center gap-3"><span className="grid h-11 w-11 place-items-center rounded-full bg-white/10"><CalendarDays size={21}/></span><span><b className="block">Flexible planning</b><small className="text-white/60">Choose your travel day</small></span></div><div className="flex items-center gap-3"><span className="grid h-11 w-11 place-items-center rounded-full bg-white/10"><Users size={21}/></span><span><b className="block">For every traveler</b><small className="text-white/60">Solo, family or friends</small></span></div></div><div className="mt-8 flex flex-wrap gap-2">{categories.map(category=><button type="button" key={category} onClick={()=>setFilter(category)} aria-pressed={filter===category} className={`rounded-full border px-4 py-2 text-sm font-bold transition ${filter===category?'border-ocean bg-ocean text-white':'border-slate-200 bg-white text-slate-600 hover:border-teal hover:text-teal'}`}>{category}</button>)}</div><div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">{visible.map(experience=><ExperienceCard key={experience.id} experience={experience}/>)}</div></PageShell>;
+  return <PageShell kicker="Travel better" title="Experiences on the water">
+    <div className="mt-8 overflow-hidden rounded-3xl shadow-lg">
+    <section className="relative min-h-[330px] overflow-hidden">
+      <img src="/assets/images/expeiencebanner.png" alt="Ferry journey through India's coast" className="absolute inset-0 h-full w-full object-cover"/>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#063b4c]/90 via-[#063b4c]/45 to-transparent"/>
+      <div className="relative z-10 flex min-h-[330px] max-w-xl flex-col justify-center p-7 text-white sm:p-10">
+        <p className="text-sm font-bold uppercase tracking-[0.25em] text-teal-100">Travel better</p>
+        <h2 className="mt-3 text-4xl font-black leading-tight sm:text-5xl">Experiences on <span className="text-teal-100">the water</span></h2>
+        <p className="mt-4 max-w-lg text-base leading-7 text-white/80">More than a ferry ride. Find memorable ways to explore India’s islands, harbours and coastal cities.</p>
+      </div>
+    </section>
+    <div className="relative z-10 grid gap-4 bg-ocean p-5 text-white sm:grid-cols-3 sm:p-6">
+      <div className="flex items-center gap-3"><span className="grid h-11 w-11 place-items-center rounded-full bg-white/10"><Ship size={21}/></span><span><b className="block">Curated journeys</b><small className="text-white/60">Handpicked routes</small></span></div>
+      <div className="flex items-center gap-3"><span className="grid h-11 w-11 place-items-center rounded-full bg-white/10"><CalendarDays size={21}/></span><span><b className="block">Flexible planning</b><small className="text-white/60">Choose your travel day</small></span></div>
+      <div className="flex items-center gap-3"><span className="grid h-11 w-11 place-items-center rounded-full bg-white/10"><Users size={21}/></span><span><b className="block">For every traveler</b><small className="text-white/60">Solo, family or friends</small></span></div>
+    </div>
+    </div>
+    <div className="mt-7 flex flex-wrap gap-2">{categories.map(category=><button type="button" key={category} onClick={()=>setFilter(category)} aria-pressed={filter===category} className={`rounded-full border px-4 py-2 text-sm font-bold transition ${filter===category?'border-ocean bg-ocean text-white':'border-slate-200 bg-white text-slate-600 hover:border-teal hover:text-teal'}`}>{category}</button>)}</div>
+    <div className="mt-5 grid gap-6 md:grid-cols-2 xl:grid-cols-3">{visible.map(experience=><ExperienceCard key={experience.id} experience={experience}/>)}</div>
+  </PageShell>;
 }
