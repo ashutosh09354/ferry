@@ -16,5 +16,14 @@ import Register from './pages/Register';
 import Profile from './pages/Profile';
 import Settings from './pages/Settings';
 import Help from './pages/Help';
+import Terms from './pages/Terms';
+import Privacy from './pages/Privacy';
+import CancellationRefund from './pages/CancellationRefund';
+import BookingPayment from './pages/BookingPayment';
+import TravelBoarding from './pages/TravelBoarding';
+import Disclaimer from './pages/Disclaimer';
+import Cookie from './pages/Cookie';
+import Grievance from './pages/Grievance';
+import PrivacyCenter from './pages/PrivacyCenter';
 import NotFound from './pages/NotFound';
-export default function App(){const path=useLocation().pathname;if(path==='/')return <Home/>;if(path==='/routes')return <RoutesPage/>;if(path==='/schedule')return <SchedulePage/>;if(path==='/experiences')return <Experiences/>;if(path==='/search')return <SearchPage/>;if(path.startsWith('/ferry/'))return <Details/>;if(path==='/passenger')return <Passenger/>;if(path==='/payment')return <Payment/>;if(path==='/confirmation')return <Confirmation/>;if(path==='/ticket')return <TicketPage/>;if(path==='/bookings')return <Bookings/>;if(path==='/login')return <Login/>;if(path==='/register')return <Register/>;if(path==='/profile')return <Profile/>;if(path==='/settings')return <Settings/>;if(path==='/help')return <Help/>;return <NotFound/>}
+export default function App(){const path=useLocation().pathname;if(path==='/')return <Home/>;if(path==='/routes')return <RoutesPage/>;if(path==='/schedule')return <SchedulePage/>;if(path==='/experiences')return <Experiences/>;if(path==='/search')return <SearchPage/>;if(path.startsWith('/ferry/'))return <Details/>;if(path==='/passenger')return <Passenger/>;if(path==='/payment')return <Payment/>;if(path==='/confirmation')return <Confirmation/>;if(path==='/ticket')return <TicketPage/>;if(path==='/bookings')return <Bookings/>;if(path==='/login')return <Login/>;if(path==='/register')return <Register/>;if(path==='/profile')return <Profile/>;if(path==='/settings')return <Settings/>;if(path==='/help')return <Help/>;if(path==='/terms')return <Terms/>;if(path==='/privacy')return <Privacy/>;if(path==='/cancellation-refund')return <CancellationRefund/>;if(path==='/booking-payment')return <BookingPayment/>;if(path==='/travel-boarding')return <TravelBoarding/>;if(path==='/disclaimer')return <Disclaimer/>;if(path==='/cookie')return <Cookie/>;if(path==='/grievance')return <Grievance/>;if(path==='/privacy-center')return <PrivacyCenter/>;return <NotFound/>}
